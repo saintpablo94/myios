@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [_imageView setImage:[UIImage imageWithContentsOfFile:
-                [[NSBundle mainBundle] pathForResource:@"Amazonprime" ofType:@"jpg"]]];
+                [[NSBundle mainBundle] pathForResource:@"amazonprime" ofType:@"jpg"]]];
     
 }
 
@@ -38,7 +38,7 @@
     if([_switchButton isOn]){
         [_imageView setAlpha:1.0f];
     }else{
-        [_imageView setAlpha:0.0f];
+        [_imageView setAlpha:0.5f];
     }
 }
 @end
