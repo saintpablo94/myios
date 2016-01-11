@@ -31,7 +31,7 @@
                                 </connections>
                             </button>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cee-Bs-ja0">
-                                <rect key="frame" x="0.0" y="99" width="320" height="469"/>
+                                <rect key="frame" x="0.0" y="99" width="320" height="42"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5EG-nS-pfu">
@@ -39,11 +39,36 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="iOS Programming을 시작합니다." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GXz-Ms-rSg">
+                                <rect key="frame" x="0.0" y="149" width="240" height="38"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cR9-PS-bjM">
+                                <rect key="frame" x="276" y="149" width="30" height="30"/>
+                                <state key="normal" title="Text"/>
+                                <connections>
+                                    <action selector="inputTextToTextView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A5B-TH-7pd"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FVc-uF-fXn">
+                                <rect key="frame" x="0.0" y="204" width="320" height="320"/>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KHl-5u-JzS">
+                                <rect key="frame" x="265" y="529" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5us-XL-1yo"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="FVc-uF-fXn" id="fky-j2-sAc"/>
+                        <outlet property="switchButton" destination="KHl-5u-JzS" id="0dj-it-he6"/>
                         <outlet property="textField" destination="5EG-nS-pfu" id="NZP-Es-GG4"/>
+                        <outlet property="textView" destination="GXz-Ms-rSg" id="1gs-zH-Djy"/>
                         <outlet property="webView" destination="cee-Bs-ja0" id="1g2-IY-xt0"/>
                     </connections>
                 </viewController>
